@@ -16,12 +16,14 @@ Template.postSubmit.events({
     e.preventDefault();
     
     var post = {
-      url: $(e.target).find('[name=url]').val(),
-      title: $(e.target).find('[name=title]').val()
+      name: $(e.target).find('[name=name]').val(),
+      adress: $(e.target).find('[name=adress]').val(),
+      type: $(e.target).find('[name=type]').val(),
+      imageurl:$(e.target).find('[name=imageurl]').val()
     };
     
     var errors = validatePost(post);
-    if (errors.title || errors.url)
+    if (errors.name || errors.adress)
       return Session.set('postSubmitErrors', errors);
     
     Meteor.call('postInsert', post, function(error, result) {

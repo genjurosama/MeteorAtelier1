@@ -13,10 +13,11 @@ if (Posts.find().count() === 0) {
   var sacha = Meteor.users.findOne(sachaId);
   
   var telescopeId = Posts.insert({
-    title: 'Introducing Telescope',
+    name: 'leoni cafe',
     userId: sacha._id,
     author: sacha.profile.name,
-    url: 'http://sachagreif.com/introducing-telescope/',
+    adress: 'salmia 2',
+     imageurl: 'http://vectorpage.com/uploads/2013/09/Cartoon-restaurant-vector-6.jpg',
     submitted: new Date(now - 7 * 3600 * 1000),
     commentsCount: 2,
     upvoters: [], votes: 0
@@ -39,20 +40,22 @@ if (Posts.find().count() === 0) {
   });
   
   Posts.insert({
-    title: 'Meteor',
+    name: 'Meteor cafe',
     userId: tom._id,
     author: tom.profile.name,
-    url: 'http://meteor.com',
+    adress: 'casablanca',
+     imageurl: 'http://vectorpage.com/uploads/2013/09/Cartoon-restaurant-vector-6.jpg',
     submitted: new Date(now - 10 * 3600 * 1000),
     commentsCount: 0,
     upvoters: [], votes: 0
   });
   
   Posts.insert({
-    title: 'The Meteor Book',
+    title: 'hay cafe',
     userId: tom._id,
     author: tom.profile.name,
-    url: 'http://themeteorbook.com',
+    adress: 'hay mohammadi',
+    imageurl: 'http://vectorpage.com/uploads/2013/09/Cartoon-restaurant-vector-6.jpg',
     submitted: new Date(now - 12 * 3600 * 1000),
     commentsCount: 0,
     upvoters: [], votes: 0
@@ -60,10 +63,11 @@ if (Posts.find().count() === 0) {
   
   for (var i = 0; i < 10; i++) {
     Posts.insert({
-      title: 'Test post #' + i,
+      name: 'Test place #' + i,
       author: sacha.profile.name,
       userId: sacha._id,
-      url: 'http://google.com/?q=test-' + i,
+      adress: 'quartier' + i,
+       imageurl: 'http://vectorpage.com/uploads/2013/09/Cartoon-restaurant-vector-6.jpg',
       submitted: new Date(now - i * 3600 * 1000 + 1),
       commentsCount: 0,
       upvoters: [], votes: 0

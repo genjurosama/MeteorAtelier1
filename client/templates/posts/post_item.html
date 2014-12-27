@@ -1,8 +1,8 @@
 <template name="postItem">
   <div class="post" {{attributes}}>
-    <a href="#" class="upvote btn btn-default {{upvotedClass}}">⬆</a>
     <div class="post-content">
-      <h3><a href="{{url}}">{{title}}</a><span>{{domain}}</span></h3>
+      <img  width="10%" height="auto" src="{{imageurl}}"/>
+      <h3><a href="{{url}}">{{name}}</a><span>{{adress}}</span></h3>
       <p>
         {{pluralize votes "Vote"}},
         submitted by {{author}},
@@ -11,5 +11,6 @@
       </p>
     </div>
     <a href="{{pathFor 'postPage'}}" class="discuss btn btn-default">Discuss</a>
+    <a href="#" class="upvote btn btn-default {{upvotedClass}}">Vote</a>
   </div>
 </template>

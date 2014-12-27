@@ -1,18 +1,37 @@
 <template name="postSubmit">
   <form class="main form">
-    <div class="form-group {{errorClass 'url'}}">
-      <label class="control-label" for="url">URL</label>
+    <div class="form-group {{errorClass 'name'}}">
+      <label class="control-label" for="url">Name</label>
       <div class="controls">
-          <input name="url" id="url" type="text" value="" placeholder="Your URL" class="form-control"/>
-          <span class="help-block">{{errorMessage 'url'}}</span>
+          <input name="name" id="name" type="text" value="" placeholder="the place name" class="form-control"/>
+          <span class="help-block">{{errorMessage 'name'}}</span>
       </div>
     </div>
-    <div class="form-group {{errorClass 'title'}}">
-      <label class="control-label" for="title">Title</label>
+    <div class="form-group {{errorClass 'adress'}}">
+      <label class="control-label" for="title">Adresse</label>
       <div class="controls">
-          <input name="title" id="title" type="text" value="" placeholder="Name your post" class="form-control"/>
-          <span class="help-block">{{errorMessage 'title'}}</span>
+          <input name="adress" id="adress" type="text" value="" placeholder="type the adress" class="form-control"/>
+          <span class="help-block">{{errorMessage 'adress'}}</span>
       </div>
+    </div>
+    <div class="form-group {{errorClass 'imgurl'}}">
+      <label class="control-label" for="title">Image</label>
+      <div class="controls">
+          <input name="imageurl" id="imageurl" type="text" value="" placeholder="image url" class="form-control"/>
+          <span class="help-block">{{errorMessage 'imageurl'}}</span>
+      </div>
+    </div>
+     <div class="form-group {{errorClass 'type'}}">
+      <label class="control-label" for="title">Type</label>
+      <div class="controls">
+          <select name="type" id="type"  value="" placeholder="type the adress" class="form-control">
+            <option value="Restaurant">Restaurant</option>
+             <option value="Hotel">Hotel</option>
+             <option value="Shop">Shop</option>
+        </select> 
+          <span class="help-block">{{errorMessage 'adress'}}</span>
+      </div>
+      
     </div>
     <input type="submit" value="Submit" class="btn btn-primary"/>
   </form>

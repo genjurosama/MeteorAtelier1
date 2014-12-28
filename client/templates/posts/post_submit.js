@@ -19,7 +19,9 @@ Template.postSubmit.events({
       name: $(e.target).find('[name=name]').val(),
       adress: $(e.target).find('[name=adress]').val(),
       type: $(e.target).find('[name=type]').val(),
-      imageurl:$(e.target).find('[name=imageurl]').val()
+      imageurl:$(e.target).find('[name=imageurl]').val(),
+      lat:$(e.target).find('[name=lat]').val(),
+      long:$(e.target).find('[name=long]').val(),
     };
     
     var errors = validatePost(post);

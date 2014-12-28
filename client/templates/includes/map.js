@@ -3,6 +3,7 @@ Template.map.rendered = function() {
         gmaps.initialize();
  
   Tracker.autorun(function() {
+      Meteor.subscribe('allposts');
        var pages = Posts.find().fetch();
         _.each(pages, function(page) {
           console.log("react");

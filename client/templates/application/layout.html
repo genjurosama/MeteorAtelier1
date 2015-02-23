@@ -7,3 +7,25 @@
     </div>
   </div>
 </template>
+
+
+<template name="searchResult">
+  <div id='search-result'>
+    <div id="search-meta">
+      {{#if isLoading}}
+        searching ...
+      {{/if}}
+    </div>
+
+    {{#each getPlaces}}
+    <div class="package">
+      <h4 class="name">
+        <a href="{{git}}" target="_blank">{{{name}}}</a>
+      </h4>
+      <div class="description">
+        {{{adress}}}
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</template>
